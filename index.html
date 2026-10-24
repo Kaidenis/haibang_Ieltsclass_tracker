@@ -234,12 +234,19 @@ input::placeholder,textarea::placeholder{color:#b092b6}
 .today-pill .dot{background:#ff82cd!important;box-shadow:0 0 9px rgba(255,112,201,.8)!important}
 .top-actions .icon-button{background:linear-gradient(140deg,rgba(255,118,201,.25),rgba(177,125,240,.25))!important;color:#ffe5f6!important;border-color:rgba(255,180,230,.3)!important}
 
+
+/* Mobile navigation icon and home action fit */
+.nav-vocab-icon{display:inline-grid;place-items:center;width:20px;height:20px;color:#ff9bd8;flex:0 0 20px}
+.nav-vocab-icon svg{display:block;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 5px rgba(255,121,205,.35))}
+@media(max-width:780px){.nav-vocab-icon{width:19px;height:19px;flex-basis:19px}.nav-vocab-icon svg{width:18px;height:18px}}
+@media(max-width:780px){#homeView .section-intro{display:grid;grid-template-columns:minmax(0,1fr);align-items:start;gap:12px}#homeView .section-intro>.primary-button{width:100%;max-width:100%;min-height:44px;padding:11px 14px;white-space:normal;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.3;font-size:12px}}
+
 </style></head>
 <body><div class="app-shell">
 <aside class="sidebar"><div class="brand"><div class="brand-mark">K</div><div><strong>Study IELTS with Kai</strong><span>IELTS study space</span><small class="brand-credit">CREATOR: DANG HAI BANG</small></div></div><nav class="nav-list" aria-label="Navigation">
 <button class="nav-item active" data-view="home"><span>⌂</span> Home</button>
 <button class="nav-item" data-view="study"><span>✦</span> Study Session</button>
-<button class="nav-item" data-view="vocabulary"><span>✳</span> My vocabulary <i id="vocabCount">0</i></button>
+<button class="nav-item" data-view="vocabulary"><span class="nav-icon nav-vocab-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 5.5h15v13h-15zM8 9h8M8 12h8M8 15h5"/></svg></span> My vocabulary <i id="vocabCount">0</i></button>
 <button class="nav-item" data-view="grammar"><span>A</span> Grammar</button>
 <button class="nav-item" data-view="writing"><span>✎</span> Writing Archive</button>
 <button class="nav-item" data-view="speaking"><span>◉</span> Speaking</button>
